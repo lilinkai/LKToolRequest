@@ -12,6 +12,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        LKToolRequest().sendRequest(request: RecommendListRequest(), handler: { (data, url) in
+            print("data ======= \(data, url)")
+        })
         // Do any additional setup after loading the view, typically from a nib.
     }
 

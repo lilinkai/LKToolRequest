@@ -14,9 +14,10 @@
 		73BF33691DF5B05C00BB4603 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73BF33671DF5B05C00BB4603 /* LaunchScreen.storyboard */; };
 		73BF33741DF5B05C00BB4603 /* ToolRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF33731DF5B05C00BB4603 /* ToolRequestTests.swift */; };
 		73BF337F1DF5B05C00BB4603 /* ToolRequestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF337E1DF5B05C00BB4603 /* ToolRequestUITests.swift */; };
-		73BF33901DF5B18F00BB4603 /* LKRequestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF338F1DF5B18F00BB4603 /* LKRequestConfig.swift */; };
-		73BF33921DF5B1A700BB4603 /* LKRequestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF33911DF5B1A700BB4603 /* LKRequestClient.swift */; };
-		73BF33941DF5B23A00BB4603 /* LKRequestParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF33931DF5B23A00BB4603 /* LKRequestParse.swift */; };
+		73BF33901DF5B18F00BB4603 /* LKRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF338F1DF5B18F00BB4603 /* LKRequestProtocol.swift */; };
+		73BF33961DF65BAF00BB4603 /* RecommendListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF33951DF65BAF00BB4603 /* RecommendListRequest.swift */; };
+		73BF339A1DF6973900BB4603 /* LKToolRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF33991DF6973900BB4603 /* LKToolRequest.swift */; };
+		73BF339C1DF69ED900BB4603 /* LKToolConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF339B1DF69ED900BB4603 /* LKToolConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +51,10 @@
 		73BF337A1DF5B05C00BB4603 /* ToolRequestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToolRequestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73BF337E1DF5B05C00BB4603 /* ToolRequestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolRequestUITests.swift; sourceTree = "<group>"; };
 		73BF33801DF5B05C00BB4603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		73BF338F1DF5B18F00BB4603 /* LKRequestConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKRequestConfig.swift; sourceTree = "<group>"; };
-		73BF33911DF5B1A700BB4603 /* LKRequestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKRequestClient.swift; sourceTree = "<group>"; };
-		73BF33931DF5B23A00BB4603 /* LKRequestParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKRequestParse.swift; sourceTree = "<group>"; };
+		73BF338F1DF5B18F00BB4603 /* LKRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKRequestProtocol.swift; sourceTree = "<group>"; };
+		73BF33951DF65BAF00BB4603 /* RecommendListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendListRequest.swift; sourceTree = "<group>"; };
+		73BF33991DF6973900BB4603 /* LKToolRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKToolRequest.swift; sourceTree = "<group>"; };
+		73BF339B1DF69ED900BB4603 /* LKToolConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKToolConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				73BF338C1DF5B08300BB4603 /* LKToolRequest */,
 				73BF335E1DF5B05C00BB4603 /* AppDelegate.swift */,
+				73BF33951DF65BAF00BB4603 /* RecommendListRequest.swift */,
 				73BF33601DF5B05C00BB4603 /* ViewController.swift */,
 				73BF33621DF5B05C00BB4603 /* Main.storyboard */,
 				73BF33651DF5B05C00BB4603 /* Assets.xcassets */,
@@ -135,9 +138,9 @@
 		73BF338C1DF5B08300BB4603 /* LKToolRequest */ = {
 			isa = PBXGroup;
 			children = (
-				73BF338F1DF5B18F00BB4603 /* LKRequestConfig.swift */,
-				73BF33911DF5B1A700BB4603 /* LKRequestClient.swift */,
-				73BF33931DF5B23A00BB4603 /* LKRequestParse.swift */,
+				73BF338F1DF5B18F00BB4603 /* LKRequestProtocol.swift */,
+				73BF33991DF6973900BB4603 /* LKToolRequest.swift */,
+				73BF339B1DF69ED900BB4603 /* LKToolConfig.swift */,
 			);
 			path = LKToolRequest;
 			sourceTree = "<group>";
@@ -276,11 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73BF339C1DF69ED900BB4603 /* LKToolConfig.swift in Sources */,
 				73BF33611DF5B05C00BB4603 /* ViewController.swift in Sources */,
 				73BF335F1DF5B05C00BB4603 /* AppDelegate.swift in Sources */,
-				73BF33941DF5B23A00BB4603 /* LKRequestParse.swift in Sources */,
-				73BF33921DF5B1A700BB4603 /* LKRequestClient.swift in Sources */,
-				73BF33901DF5B18F00BB4603 /* LKRequestConfig.swift in Sources */,
+				73BF33961DF65BAF00BB4603 /* RecommendListRequest.swift in Sources */,
+				73BF33901DF5B18F00BB4603 /* LKRequestProtocol.swift in Sources */,
+				73BF339A1DF6973900BB4603 /* LKToolRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +529,7 @@
 				73BF33851DF5B05C00BB4603 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73BF33861DF5B05C00BB4603 /* Build configuration list for PBXNativeTarget "ToolRequestTests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +538,7 @@
 				73BF33881DF5B05C00BB4603 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73BF33891DF5B05C00BB4603 /* Build configuration list for PBXNativeTarget "ToolRequestUITests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +547,7 @@
 				73BF338B1DF5B05C00BB4603 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
